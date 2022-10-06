@@ -3,6 +3,8 @@
 let nombre = prompt ("Por favor, ingrese su nombre y apellido")
 alert ("Bienvenido" + " " + nombre)
 
+const mensaje = ("muchas garcias por su compra que lo difrutes")
+
 let venta = prompt ("Que tipo de lampara desea? le mostramos la variedad de lampara  que disponemos, (valle, gota, raya,you, nudo) Para terminar coloque 'salir' ")
 while (venta != "salir"){
     switch(venta){
@@ -11,38 +13,38 @@ while (venta != "salir"){
             while(valle  == ""){
                 vale = barprompt("la valle que tenemos disponibles son:(natural + negro/blanca o negro + negor/blanco)").toLowerCase()
             }
-            alert ("muchas garcias por su compra que lo difrutes")
+            alert (mensaje);
             break
         case "gota":
             let gota = prompt("la gota que tenemos dispinibles son(balca/negra(dali/comun)).").toLowerCase()
             while(gota == ""){
                 gota =prompt("la gota que tenemos dispinibles son(balca/negra(dali/comun)).").toLowerCase()
             }
-            alert ("muchas garcias por su compra que lo difrutes")
+            alert (mensaje);
             break
         case "raya":
             let raya = prompt("las rayas que tenemos disponibles son:(negra/blanca) e enchapadas(gris tersio/petiribi).").toLowerCase()    
             while(raya ==""){
                 raya =prompt("las rayas que tenemos disponibles son:(negra/blanca) e enchapadas(gris tersio/petiribi).").toLowerCase()
             }
-            alert("muchas garcias por su compra que lo difrutes")
+            alert (mensaje);
             break
         case "you":
             let you = prompt("las you disponibles son:(L75/L40/ Y aplique los colores son negro e blanco)").toLowerCase()
             while(you == ""){
                 you =prompt("las you disponibles son:(L75/L40/ Y aplique los colores son negro e blanco)").toLowerCase()
             }
-            alert("muchas garcias por su compra que lo difrutes")
+            alert (mensaje);
             break
         case "nudo":
             let nudo =prompt("las nudo disponibles son:(marfil/grafito/tierra)").toLowerCase()
             while(nudo == ""){
                 nudo =prompt("las nudo disponibles son:(marfil/grafito/tierra)").toLowerCase()
             }
-            alert("muchas garcias por su compra que lo difrutes")
+            alert (mensaje);
             break
         default:
-            alert("La terapia ingresada no existe, recuerde que puede colocar 'salir' para finalizar")
+            alert("La lampara seleccionada no existe, recuerde que puede colocar 'salir' para finalizar")
             break
     }
     venta = prompt (" Que tipo de lampara desea? le mostramos la variedad de lampara  que disponemos, (valle, gota, raya,you, nudo) Para terminar coloque 'salir' ")

@@ -49,14 +49,15 @@ while (venta != "salir"){
     }
     venta = prompt (" Que tipo de lampara desea? le mostramos la variedad de lampara  que disponemos, (valle, gota, raya,you, nudo) Para terminar coloque 'salir' ")
 }
-            alert ("Usted puede pagar una terapia de forma semestral en la cual recibira un descuento ya que, cada sesion tendra un valor de $1500 es decir un 30% menos del valor actual de la sesion")
-            alert("El valor semestral actual es de $36000 y puede variar el costo con tarjetas de credito pudiendo ser financiadas en hasta 12 cuotas, de contado serian " + " " + cuota(36000,15,12))
-function cuota (credito, interes, meses){
-        let cuota = credito *(1 + interes/100)/meses
-    return cuota
+
+let cuotas = (credito, interes, meses) =>{
+    let cuotas = credito *(1 + interes/100)/meses
+return cuotas
 }
-            console.log(calcInteres ("macro"))
-function calcInteres (banco){
+            alert ("Usted puede pagar la lampara  de forma mensual en la cual recibira un descuento por haber, superado el monto de 50000,tendra el descuento del 30% menos del valor actual del producto elejido")
+            alert("El valor mensual actual es de $60000 y puede variar el costo con tarjetas de credito pudiendo ser financiadas en hasta 12 cuotas, de contado serian " + " " + cuotas(60000,15,12));
+
+let calcInteres = (banco) =>{
     switch(banco){
             case "bvva":
     return 25
@@ -68,6 +69,9 @@ function calcInteres (banco){
     return 0
     }
 }
-function mostrar (banco, credito, interes, cuota,meses){
-    document.writ(`el credito del banco ${banco} es de ${credito} con un interes de ${interes} a pagar en cuotas de ${cuota} durante ${meses}`)
+
+console.log(calcInteres ("macro"));
+
+let mostrar = (banco, credito, interes, cuotas,meses) =>{
+    document.writ(`el credito del banco ${banco} es de ${credito} con un interes de ${interes} a pagar en cuotas de ${cuotas} durante ${meses}`)
 }
